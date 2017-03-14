@@ -1,0 +1,13 @@
+*.pyc
+*.netrwhist
+*.log
+*.session.vim
+
+
+# folder ignore
+autoload/
+autoload/*
+plugged/
+view/
+tmp/
+files/
