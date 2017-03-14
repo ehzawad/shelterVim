@@ -1100,10 +1100,6 @@ cabb Tex  Texplore
 " Autoformat plugin
 cabb Au Autoformat
 cabb AU Autoformat
-cabb fz FZF
-cabb fzf FZF
-cabb Fz FZF
-cabb Fzf Fzf
 
 " NETRW built in Project drawer
 " Quickly explore directory with Netrw, positioning cursor to the last file
