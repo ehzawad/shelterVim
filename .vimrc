@@ -425,7 +425,6 @@ augroup sourceCodePHP
   autocmd!
   autocmd FileType php nnoremap <leader>r :! php<space>
   autocmd FileType php nnoremap <leader>rr :! php %<CR>
-  " autocmd FileType php colo jellybeans
 augroup END
 
 function! JscsFix()
@@ -522,14 +521,14 @@ endfunction
 
 " vimdiif instantiates in different colorscheme
 if &diff
-  colorscheme jellybeans
+  colorscheme tender
 endif
 
 " diff with file itself
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d | diffthis | wincmd p | diffthis
 
 
-au FilterWritePre * if &diff | colorscheme jellybeans | endif
+au FilterWritePre * if &diff | colorscheme tender | endif
 
 " By default, vim thinks .md is Modula-2.
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
