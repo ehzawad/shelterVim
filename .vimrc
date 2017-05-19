@@ -1654,3 +1654,6 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:multi_cursor_next_key='<C-s>'
 
 command! W w !sudo tee % > /dev/null
+
+" Plug 'artur-shaik/vim-javacomplete2'
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
