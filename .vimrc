@@ -1155,10 +1155,6 @@ func! LessInitFunc()
 endfunc
 command! LessInitFunc :call LessInitFunc()
 
-
-execute "set <M-p>=\ep"
-execute "set <M-P>=\eP"
-
 " tHIS FUNction
 " all credits to https://github.com/dhruvasagar
 function! NeatFoldText()
