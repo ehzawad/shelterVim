@@ -444,7 +444,7 @@ command! JscsFix :call JscsFix()
 augroup sourceCodeJS
   autocmd!
   autocmd FileType javascript nnoremap <leader>r :! node %<CR>
-  autocmd FileType javascript nnoremap <leader>rr :! babel-node %<CR>
+  " autocmd FileType javascript nnoremap <leader>rr :! babel-node %<CR>
   autocmd FileType javascript nnoremap <leader>ja :call JscsFix()<CR>:w<CR>
   " JscsFix command just before the buffer is written for *.js files"
   " autocmd bufwritepre *.js JscsFix
