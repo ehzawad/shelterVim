@@ -429,26 +429,12 @@ augroup sourceCodePHP
   autocmd FileType php nnoremap <leader>rr :! php %<CR>
 augroup END
 
-function! JscsFix()
-  "Save current cursor position"
-  let l:winview = winsaveview()
-  "Pipe the current buffer (%) through the jscs -x command"
-  % ! jscs -x
-  "Restore cursor position - this is needed as piping the file"
-  "through jscs jumps the cursor to the top"
-  call winrestview(l:winview)
-  redraw!
-endfunction
-command! JscsFix :call JscsFix()
 
 " Better for JS
 augroup sourceCodeJS
   autocmd!
   autocmd FileType javascript nnoremap <leader>r :! node %<CR>
   " autocmd FileType javascript nnoremap <leader>rr :! babel-node %<CR>
-  autocmd FileType javascript nnoremap <leader>ja :call JscsFix()<CR>:w<CR>
-  " JscsFix command just before the buffer is written for *.js files"
-  " autocmd bufwritepre *.js JscsFix
 augroup END
 
 " Better for TS
