@@ -12,6 +12,7 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
@@ -1653,3 +1654,6 @@ command! W w !sudo tee % > /dev/null
 
 " Plug 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" pretty
+autocmd BufWritePre,TextChanged,InsertLeave *.js Neoformat
