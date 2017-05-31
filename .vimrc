@@ -1642,4 +1642,4 @@ command! W w !sudo tee % > /dev/null
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " pretty
-autocmd BufWritePre,TextChanged,InsertLeave *.js Neoformat
+autocmd BufWritePost,InsertLeave *.js Neoformat
