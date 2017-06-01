@@ -13,6 +13,7 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 Plug 'w0rp/ale'
+Plug 'sbdchd/neoformat' , { 'do': 'npm install -g prettier' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -1639,3 +1640,6 @@ command! W w !sudo tee % > /dev/null
 
 " Plug 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+autocmd BufWritePost *.js Neoformat
+
