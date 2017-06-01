@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 Plug 'sbdchd/neoformat' , { 'do': 'npm install -g prettier' }
-Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'terryma/vim-multiple-cursors'
@@ -1085,9 +1084,6 @@ cabb tabc tabclose
 cabb tabp tabprevious
 cabb Tex  Texplore
 
-" Autoformat plugin
-cabb Au Autoformat
-cabb AU Autoformat
 
 " NETRW built in Project drawer
 " Quickly explore directory with Netrw, positioning cursor to the last file
@@ -1307,9 +1303,6 @@ function! HighlightAllOfWord(...)
 endfunction
 command! -nargs=? HighlightAllOfWord  call HighlightAllOfWord(<f-args>)
 
-" etc
-"   Chiel92/vim-autoformat
-"
 
 " glorious tag generate in insert mode in any file
 inoremap <c-x>{ }}<esc>Bi{{
@@ -1431,9 +1424,6 @@ augroup pythonSource
   autocmd!
   autocmd FileType python nnoremap <leader>r :! python3 %<CR>
 augroup END
-
-" autoformat support by google
-let g:formatter_yapf_style = 'google'
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
