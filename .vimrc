@@ -11,7 +11,7 @@ scriptencoding utf-8
 filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
-
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 Plug 'sbdchd/neoformat' , { 'do': 'npm install -g prettier' }
 Plug 'Chiel92/vim-autoformat'
@@ -1643,3 +1643,5 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 autocmd BufWritePost *.js Neoformat
 
+" fuzzy finder
+nnoremap <leader>ff :FZF<CR>
