@@ -394,6 +394,8 @@ augroup END
 augroup sourceCodeCPP
   autocmd!
   autocmd FileType cc,cpp nnoremap <leader>b :! make %:r<CR>
+  autocmd FileType cc,cpp,c map <C-F> :pyf ~/.myClang/share/clang/clang-format.py<cr>
+  autocmd Filetype cc,cpp,c imap <C-F> <c-o>:pyf ~/.myClang/share/clang/clang-format.py<cr>
   autocmd BufWritePost  *.cc  retab! 4
   autocmd BufWritePost  *.cpp  retab! 4
   autocmd FileType cc,cpp nnoremap <leader>mb :! clang++ -ggdb3 -O0 -std=c++14 -stdlib=libc++ -lc++abi -ldl -lm -latomic -Werror -Wself-assign -Wall -pedantic-errors -Wextra-tokens -Wambiguous-member-template -Wbind-to-temporary-copy -fcolor-diagnostics -fdiagnostics-show-template-tree -ferror-limit=33 -ftemplate-backtrace-limit=13 -lpthread -l:libmagic.so.1 *.cpp -o %:r<CR>
@@ -1645,3 +1647,4 @@ if 'VIRTUAL_ENV' in os.environ:
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
   execfile(activate_this, dict(__file__=activate_this))
 EOF
+
