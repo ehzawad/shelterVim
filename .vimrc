@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'w0rp/ale', { 'do': 'npm install -g eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import' }
 Plug 'heavenshell/vim-prettier', { 'do' : 'npm install -g prettier-eslint-cli' }
+" :Prettier<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -1646,5 +1647,3 @@ if 'VIRTUAL_ENV' in os.environ:
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
   execfile(activate_this, dict(__file__=activate_this))
 EOF
-
-
