@@ -11,9 +11,10 @@ scriptencoding utf-8
 filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'w0rp/ale', { 'do': 'npm install -g eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import' }
+Plug 'heavenshell/vim-prettier', { 'do' : 'npm install -g prettier-eslint-cli' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'w0rp/ale'
-Plug 'sbdchd/neoformat' , { 'do': 'npm install -g prettier' }
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'terryma/vim-multiple-cursors'
@@ -435,7 +436,7 @@ augroup END
 augroup sourceCodeJS
   autocmd!
   autocmd FileType javascript nnoremap <leader>r :! node %<CR>
-  " autocmd FileType javascript nnoremap <leader>rr :! babel-node %<CR>
+  autocmd FileType javascript nnoremap <leader>b :! babel-node %<CR>
 augroup END
 
 " Better for TS
@@ -1633,8 +1634,6 @@ command! W w !sudo tee % > /dev/null
 " Plug 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-autocmd BufWritePost *.js Neoformat
-
 " fuzzy finder
 nnoremap <leader>ff :FZF<CR>
 
@@ -1647,4 +1646,5 @@ if 'VIRTUAL_ENV' in os.environ:
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
   execfile(activate_this, dict(__file__=activate_this))
 EOF
+
 
