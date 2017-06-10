@@ -593,8 +593,10 @@ set title
 " Use the system clipboard for yank / delete / paste operations
 if has('unnamedplus')
   " " System CLipboard and vim registers
-  set clipboard=unnamedplus
-  " set clipboard=unnamed
+  " * and + register
+  " set clipboard=unnamedplus
+  " just * register
+  set clipboard=unnamed
 endif
 
 " ensure line numbers are viewable in translucent terminal windows
