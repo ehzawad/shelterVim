@@ -17,6 +17,7 @@ Plug 'heavenshell/vim-prettier', { 'do' : 'npm install -g prettier-eslint-cli' }
 " :Prettier<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
+Plug 'fatih/vim-go'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'szw/vim-g'
@@ -31,7 +32,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jacoborus/tender'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer --gocode-completer' }
 
 call plug#end()
 
