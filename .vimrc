@@ -441,6 +441,11 @@ augroup sourceCodeJS
   autocmd FileType javascript nnoremap <leader>r :! node %<CR>
   autocmd FileType javascript nnoremap <leader>b :! babel-node %<CR>
 augroup END
+" Go language
+augroup sourceCodeGO
+  autocmd!
+  autocmd FileType go nnoremap <leader>r :GoRun %<CR>
+augroup END
 
 " Better for TS
 augroup sourceCodeTS
