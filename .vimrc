@@ -12,7 +12,7 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0rp/ale', { 'do': 'npm install -g eslint@^3.19.0 prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-jsx-a11y@^5.1.1 eslint-plugin-react eslint-plugin-import eslint-config-airbnb' }
+Plug 'w0rp/ale', { 'do': 'npm install -g eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import' }
 Plug 'heavenshell/vim-prettier', { 'do' : 'npm install -g prettier-eslint-cli' }
 " :Prettier<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
