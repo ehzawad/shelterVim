@@ -402,18 +402,18 @@ augroup sourceCodeCPP
   autocmd Filetype cc,cpp,c imap <C-F> <c-o>:pyf ~/.myClang/share/clang/clang-format.py<cr>
   autocmd BufWritePost  *.cc  retab! 4
   autocmd BufWritePost  *.cpp  retab! 4
-  autocmd FileType cc,cpp nnoremap <leader>mb :! clang++ -ggdb3 -O0 -std=c++14 -stdlib=libc++ -lc++abi -ldl -lm -latomic -Werror -Wself-assign -Wall -pedantic-errors -Wextra-tokens -Wambiguous-member-template -Wbind-to-temporary-copy -fcolor-diagnostics -fdiagnostics-show-template-tree -ferror-limit=33 -ftemplate-backtrace-limit=13 -lpthread -l:libmagic.so.1 *.cpp -o %:r<CR>
+  autocmd FileType cc,cpp nnoremap <leader>mb :! clang++ -ggdb3 -O0 -std=c++17 -stdlib=libc++ -lc++abi -ldl -lm -latomic -Werror -Wself-assign -Wall -pedantic-errors -Wextra-tokens -Wambiguous-member-template -Wbind-to-temporary-copy -fcolor-diagnostics -fdiagnostics-show-template-tree -ferror-limit=33 -ftemplate-backtrace-limit=13 -lpthread -l:libmagic.so.1 *.cpp -o %:r<CR>
 
-  autocmd FileType cc,cpp nnoremap <leader>nb :! clang++ -ggdb3 -O0 -std=c++14 -stdlib=libc++ -lc++abi -ldl -lm -latomic -Werror -Wself-assign -Wall -pedantic-errors -Wextra-tokens -Wambiguous-member-template -Wbind-to-temporary-copy -fcolor-diagnostics -fdiagnostics-show-template-tree -ferror-limit=33 -ftemplate-backtrace-limit=13 -lpthread -l:libmagic.so.1 <space>
+  autocmd FileType cc,cpp nnoremap <leader>nb :! clang++ -ggdb3 -O0 -std=c++17 -stdlib=libc++ -lc++abi -ldl -lm -latomic -Werror -Wself-assign -Wall -pedantic-errors -Wextra-tokens -Wambiguous-member-template -Wbind-to-temporary-copy -fcolor-diagnostics -fdiagnostics-show-template-tree -ferror-limit=33 -ftemplate-backtrace-limit=13 -lpthread -l:libmagic.so.1 <space>
 
   " clang tooling for code refacting AST LLVM
-  autocmd FileType cc,cpp nnoremap <leader>ca :!clang++ --analyze -std=c++14 -lm -lpthread -latomic -stdlib=libc++ -Xanalyzer -analyzer-output=text -fcolor-diagnostics %<CR>
-  autocmd FileType cc,cpp nnoremap <leader>cx :!clang++ --analyze -std=c++14 -lm -lpthread -latomic -stdlib=libc++ -Xanalyzer -analyzer-output=text -fcolor-diagnostics<space>
+  autocmd FileType cc,cpp nnoremap <leader>ca :!clang++ --analyze -std=c++17 -lm -lpthread -latomic -stdlib=libc++ -Xanalyzer -analyzer-output=text -fcolor-diagnostics %<CR>
+  autocmd FileType cc,cpp nnoremap <leader>cx :!clang++ --analyze -std=c++17 -lm -lpthread -latomic -stdlib=libc++ -Xanalyzer -analyzer-output=text -fcolor-diagnostics<space>
 
-  autocmd FileType cc,cpp nnoremap <leader>cc :!clang-tidy % -checks=-*,clang-analyzer-* -- -std=c++14 -stdlib=libc++ -lc++abi -lpthread -lm -latomic<CR>
+  autocmd FileType cc,cpp nnoremap <leader>cc :!clang-tidy % -checks=-*,clang-analyzer-* -- -std=c++17 -stdlib=libc++ -lc++abi -lpthread -lm -latomic<CR>
   " address sanitizer
   " other sanitizer can be used, but there are in your bash_profile
-  autocmd FileType cc,cpp nnoremap <leader>cs :!clang++ -ggdb3 -O0 -std=c++14 -stdlib=libc++ -lc++abi -fsanitize=address -lpthread -lm -latomic<space>
+  autocmd FileType cc,cpp nnoremap <leader>cs :!clang++ -ggdb3 -O0 -std=c++17 -stdlib=libc++ -lc++abi -fsanitize=address -lpthread -lm -latomic<space>
 
   autocmd FileType cc,cpp nnoremap <leader>r :! ./
   autocmd FileType cc,cpp nnoremap <leader>rr :! ./%:r<CR>
