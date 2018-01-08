@@ -32,8 +32,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'jacoborus/tender'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --tern-completer' }
 " Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer' }
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer --gocode-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer --gocode-completer' }
 
 call plug#end()
 
