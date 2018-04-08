@@ -37,6 +37,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --tern-completer'
 " Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer --gocode-completer' }
 
 Plug 'Chiel92/vim-autoformat'
+Plug 'digitaltoad/vim-pug'
+Plug 'dNitro/vim-pug-complete', { 'for': 'pug' }
+Plug 'ap/vim-css-color'
 call plug#end()
 
 " syntax highlighting and auto-indentation
