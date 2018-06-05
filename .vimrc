@@ -1659,3 +1659,9 @@ let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " this line for YouCompleteMe
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
+
+function s:SetCursorLine()
+  set cursorline
+  set cursorcolumn
+endfunction
+autocmd VimEnter * call s:SetCursorLine()
