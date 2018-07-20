@@ -32,8 +32,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jacoborus/tender'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --tern-completer' }
-" Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer' }
 " Plug 'Valloric/YouCompleteMe', { 'do': 'python3.6 ./install.py --clang-completer --tern-completer --gocode-completer' }
 
 Plug 'Chiel92/vim-autoformat'
@@ -1665,3 +1665,8 @@ function s:SetCursorLine()
   set cursorcolumn
 endfunction
 autocmd VimEnter * call s:SetCursorLine()
+
+" " Check Python files
+let b:ale_linters = ['flake8']
+" Fix Python files with autopep8
+let b:ale_fixers = ['autopep8']
