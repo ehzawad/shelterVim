@@ -4,9 +4,9 @@ import logging
 import ycm_core
 
 BASE_FLAGS = [
-        '-Wall',
-        '-Wextra',
-        '-Werror',
+        # '-Wall',
+        # '-Wextra',
+        # '-Werror',
         '-Wno-long-long',
         '-Wno-variadic-macros',
         '-fexceptions',
