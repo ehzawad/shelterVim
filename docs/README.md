@@ -25,8 +25,8 @@ Arduino support
     Make sure you should know some VIML(Vim Script)
 
 !!! Caution!
-## Installation may vary because World is Dynamic
-  Make sure you have curl, git, tmux and bash installed
+## Installation may vary because The World is also changing
+  Make sure you have curl, git, and bash installed
 
   Install Latest Stable Vim as much as possible .
 
@@ -47,7 +47,7 @@ Remember! latest **vim** has compiled with python3
     sudo apt-get install silversearcher-ag
 
 
-## Compile vim from source
+## Compile vim from source (optional)
 > Download source zip file from
 
 > for gtk3 support use -gui=gtk3
@@ -67,7 +67,7 @@ Remember! latest **vim** has compiled with python3
      make
      make install
 
-### Set it to PATH
+### Set it to PATH (optional If you compile vim from source)
 >
 >    # set it to PATH
 ```bash
@@ -77,7 +77,7 @@ Remember! latest **vim** has compiled with python3
     export MANPATH="$VIM_HOME/share/man:$(manpath)"
 ```
 
-## Clang
+## Clang (again optional)
 
     Normally I install clang++ and llvm as a local user not as a root user
 
@@ -86,12 +86,13 @@ Remember! latest **vim** has compiled with python3
 > If you use python3 ...be sure to install python3-dev
 
 
+# Compiler set to gcc (this is very important)
 ## Now you can install the vimrc
 ### for build pre-sanity check
 
     export CXX=g++ CC=gcc ; unset CFLAGS CXXFLAGS LDLIBS
 
-jus using a single command
+jus using a single command (Use new macOS configuration, forget legacy software support)
 
     curl https://raw.githubusercontent.com/ehzawad/shelterVim/master/install.sh | cat > shelterVim.sh && bash shelterVim.sh && rm -f ./shelterVim.sh
 
